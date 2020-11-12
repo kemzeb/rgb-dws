@@ -10,7 +10,7 @@
 #define RGB_STATs_HANDLER_H
 
 #include "rgbhlr.h"
-#include <cstdlib>
+#include <vector>
 
 //
 	// A collection of methods encompassing statistical anaylsis for 
