@@ -7,7 +7,7 @@
 */
 
 #ifndef RGB_STATS_HANDLER_H
-#define RGB_STATs_HANDLER_H
+#define RGB_STATS_HANDLER_H
 
 #include "rgbhlr.h"
 #include <vector>
