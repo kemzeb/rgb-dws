@@ -19,29 +19,12 @@
 namespace rgb_dws {
 
 	// Methods for RGB data
-	RGB samp_mean(std::vector<RGB> data);
-	RGB mode(std::vector<RGB> data);
-	RGBCalc variance(std::vector<RGB> data, double mean);
-	RGBCalc samp_stand_dev(std::vector<RGB> data, double mean);
-
-	// Methods for individual color data
-		// Note that the mean of individual
-		// colors can also be computed from 
-		// the 'samp_mean' method
-	double r_mean(std::vector<RGB> clr);
-	double r_median(std::vector<RGB> clr);
-	double r_variance(std::vector<RGB> clr, double rMean);
-	double r_stand_dev(std::vector<RGBr> clr, double rMean);
-
-	double g_mean(std::vector<RGB> clr);
-	double g_median(std::vector<RGB> clr);
-	double g_variance(std::vector<RGB> clr, double gMean);
-	double g_stand_dev(std::vector<RGBr> clr, double gMean);
-
-	double b_mean(std::vector<RGB> clr);
-	double b_median(std::vector<RGB> clr);
-	double b_variance(std::vector<RGB> clr, double bMean);
-	double b_stand_dev(std::vector<RGBr> clr, double bMean);
+	
+	RGBCalc samp_mean(const std::vector<RGB>& data);
+	RGB median(const std::vector<RGB>& data);
+	RGB mode(const std::vector<RGB>& data);
+	RGBCalc variance(const std::vector<RGB>& data, double mean);
+	RGBCalc samp_stand_dev(const std::vector<RGB>& data, double mean);
 
 // Needed statistical computations:
 	// Finding the sample mean
@@ -59,5 +42,6 @@ namespace rgb_dws {
 		// and blue? ANS: Yes 
 	// Should the RGB values be ordered in sep. arrays
 		//  of three? ANS: We will need to consider three distributions if thats the case
-}
+	
+} // END OF NAMESPACE 'rgb_dws'
 #endif
