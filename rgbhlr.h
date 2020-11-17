@@ -36,6 +36,6 @@ namespace rgb_dws {
 
     };
 
-}
+} // END OF NAMESPACE 'rgb_dws'
 
 #endif
