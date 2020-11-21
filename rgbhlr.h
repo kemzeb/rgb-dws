@@ -9,14 +9,12 @@
 #ifndef RGB_HANDLER_H
 #define RGB_HANDLER_H
 
-#include <cstdlib>
-
 namespace rgb_dws {
     struct RGB {
         //
         // Constructors
         RGB();
-        RGB(uint8_t r, uint8_t g, uint8_t b);
+        RGB(short r, short g, short b);
 
         //
         // Methods
@@ -25,12 +23,14 @@ namespace rgb_dws {
 
         //
         // Fields
-        uint8_t red, green, blue;
+        short red, green, blue;
     };
 
     // struct for calculations on RGB values (i.e mean, stand. dev., etc)
     struct RGBCalc {
+        RGBCalc();
         RGBCalc(double r, double g, double b);
+        RGBCalc(const RGBCalc& c);
 
         double red, green, blue;
 
