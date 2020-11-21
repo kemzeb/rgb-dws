@@ -5,12 +5,13 @@
 *
 *
 */
+#include <vector>
 
 #include "rgbhlr.h"
 #include "rgbstats.h"
-#include <vector>
+using namespace rgb_dws;
 
-rgb_dws::RGBCalc samp_mean(std::vector<RGB> data) {
+RGBCalc rgb_dws::samp_mean(std::vector<RGB> data) {
 	RGBCalc color;
 	int sum_red = 0, sum_green = 0, sum_blue = 0;
 
