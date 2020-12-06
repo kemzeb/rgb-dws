@@ -1,8 +1,8 @@
-/**
-*
-*
-*   
-*
+/***********************************
+*	rgbstats.h
+* 
+* 
+* @author Kemal Zebari
 *
 */
 
@@ -18,13 +18,19 @@
 //
 namespace rgb_dws {
 
-	// Methods for RGB data
+	/// Methods for RGB data
 	
 	RGB samp_mean(std::vector<RGB> data);
-	RGB median(const std::vector<RGB>& data);
+	RGBCalc median(const std::vector<RGB>& data);
 	RGB mode(const std::vector<RGB>& data);
-	RGBCalc variance(const std::vector<RGB>& data, double mean);
-	RGBCalc samp_stand_dev(const std::vector<RGB>& data, double mean);
+	RGB range(const std::vector<RGB>& data);
+	RGB min(const std::vector<RGB>& data);
+	RGB max(const std::vector<RGB>& data);
+	RGBCalc samp_variance(const std::vector<RGB>& data);
+	RGBCalc samp_stand_dev(const std::vector<RGB>& data);
+
+	/// Printing methods
+	void freq_dist_RGB(const std::vector<RGB>& data); 
 
 // Needed statistical computations:
 	// Finding the sample mean
